@@ -4,7 +4,7 @@
 ; RUN: llc < %s -march=nvptx64 -mcpu=sm_70 -mattr=+ptx82 | FileCheck %s -check-prefixes=CHECK,SM70
 ; RUN: %if ptxas-12.2 %{ llc < %s -march=nvptx64 -mcpu=sm_70 -mattr=+ptx82 | %ptxas-verify -arch=sm_70 %}
 
-; TODO: add i1, <8 x i8>, and <6 x i8> vector tests.
+; TODO: add i1, and <6 x i8> vector tests.
 
 ; TODO: add test for vectors that exceed 128-bit length
 ; Per https://docs.nvidia.com/cuda/parallel-thread-execution/index.html#vectors
